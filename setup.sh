@@ -14,9 +14,9 @@ sudo apt update && sudo apt install -y \
   git \
   libvirt-daemon-system \
   podman \
+  podman-toolbox \
   qemu-system \
   qemu-utils \
-  toolbox \
   virt-manager
 
 # HomeBrew
