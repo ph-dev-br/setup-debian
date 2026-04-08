@@ -28,7 +28,7 @@ fi
 
 # fp-appimages-updater
 if ! command -v fp-appimages-updater; then
-  curl -sL https://fau.fpt.icu | bash -s -- --user --nosystemd
+  curl -sL https://fau.fpt.icu/i | bash -s -- --user --nosystemd
 fi
 
 # Add remote flatpak in userspace
