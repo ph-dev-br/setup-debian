@@ -31,8 +31,8 @@ if ! command -v fp-appimages-updater; then
   curl -sL https://fau.fpt.icu/i | bash -s -- --user --nosystemd
 fi
 
-# Add remote flatpak in userspace
-flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+# Add remote flatpak
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 #===== Softwares
 # VS Code
