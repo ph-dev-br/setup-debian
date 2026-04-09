@@ -32,7 +32,8 @@ sudo apt update && sudo apt install -y \
 if ! command -v brew; then
   NONINTERACTIVE=1 /bin/bash -c \
     "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+  echo "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)" >>$HOME/.bashrc
 fi
 
 # fp-appimages-updater
