@@ -28,7 +28,7 @@ fi
 
 # fp-appimages-updater
 if ! command -v fp-appimages-updater; then
-  curl -sL https://fau.fpt.icu/i | bash -s -- --user --nosystemd
+  curl -sL https://fau.fpt.icu/i | bash -s -- --user --no-systemd
 fi
 
 # Add remote flatpak
@@ -65,7 +65,7 @@ EOF
 chezmoi init --apply https://github.com/ph-dev-br/dotfiles.git
 
 # Appimages included in dotfiles
-fp-appimages-updater update
+fp-appimage-updater update
 
 #===== Settings
 # Add user on Docker and Libvirt groups
