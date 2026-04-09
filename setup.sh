@@ -2,6 +2,15 @@
 
 set -e
 
+#===== Prevent sudo timeout
+# See https://serverfault.com/a/702019
+sudo -v
+while true; do
+  sudo -nv
+  sleep 1m
+  kill -0 $$ 2>/dev/null || exit
+done &
+
 #===== Packages Managers
 # Install required packages and dev tools
 sudo apt update && sudo apt install -y \
