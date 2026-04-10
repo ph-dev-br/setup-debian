@@ -33,7 +33,6 @@ if ! command -v brew; then
   NONINTERACTIVE=1 /bin/bash -c \
     "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
-  echo "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)" >>$HOME/.bashrc
 fi
 
 # fp-appimages-updater
@@ -92,6 +91,10 @@ sudo chmod 440 /etc/sudoers.d/update-core
 
 # GNOME
 dconf load / <dconf.ini
+
+# Set env vars
+echo "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)" >>$HOME/.bashrc
+echo 'export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$HOME/.local/share/flaptak/exports/share:$XDG_DATA_DIRS' >>$HOME/.bashrc
 
 #===== Finishing
 systemctl reboot
