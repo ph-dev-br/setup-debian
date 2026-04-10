@@ -93,7 +93,7 @@ sudo chmod 440 /etc/sudoers.d/update-core
 dconf load / <dconf.ini
 
 # Set env vars
-echo "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)" >>$HOME/.bashrc
+echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)' >>$HOME/.bashrc
 echo 'export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$HOME/.local/share/flaptak/exports/share:$XDG_DATA_DIRS' >>$HOME/.bashrc
 
 #===== Finishing
