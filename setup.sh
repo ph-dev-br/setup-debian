@@ -8,7 +8,6 @@ sudo -v
 while true; do
   sudo -nv
   sleep 1m
-  kill -0 $$ 2>/dev/null || exit
 done &
 
 #===== Packages Managers
